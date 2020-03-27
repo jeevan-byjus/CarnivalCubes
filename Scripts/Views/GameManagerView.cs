@@ -33,7 +33,7 @@ namespace Byjus.Gamepod.CarnivalCubes.Views {
             // removing this reference because ctrl will always provide the reqd section
             // keeping it in both areas can cause shared data updating problems
             oneTimeSections = null; 
-            return oneTimeSections;
+            return ret;
         }
     }
 
