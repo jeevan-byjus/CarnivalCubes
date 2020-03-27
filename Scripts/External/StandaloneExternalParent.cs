@@ -1,8 +1,8 @@
-﻿using Byjus.Gamepod.Template.Verticals;
+﻿using Byjus.Gamepod.CarnivalCubes.Verticals;
 using UnityEngine;
 
 #if CC_STANDALONE
-namespace Byjus.Gamepod.Template.Externals {
+namespace Byjus.Gamepod.CarnivalCubes.Externals {
 
     /// <summary>
     /// The top most parent in view hierarchy in case we are running standalone

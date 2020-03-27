@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Byjus.Gamepod.Template.Verticals;
-using Byjus.Gamepod.Template.Util;
+using Byjus.Gamepod.CarnivalCubes.Verticals;
+using Byjus.Gamepod.CarnivalCubes.Util;
 
 #if !CC_STANDALONE
 using Osmo.SDK;

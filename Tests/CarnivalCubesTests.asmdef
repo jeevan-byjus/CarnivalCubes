@@ -1,13 +1,11 @@
 {
-    "name": "Template-Scripts",
+    "name": "CarnivalCubesTests",
     "references": [
-        "sdk-plugins",
-        "container-api",
-        "gamehelper-scripts",
-        "gamehelper-tweening",
-        "gamehelper-editor"
+        "CarnivalCubes"
     ],
-    "optionalUnityReferences": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

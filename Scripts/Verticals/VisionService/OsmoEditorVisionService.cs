@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Byjus.Gamepod.Template.Util;
+using Byjus.Gamepod.CarnivalCubes.Util;
 using UnityEngine;
-using Byjus.Gamepod.Template.Externals;
+using Byjus.Gamepod.CarnivalCubes.Externals;
 
 #if !CC_STANDALONE
 namespace Byjus.Gamepod.Template.Verticals {

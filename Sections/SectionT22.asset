@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a614283145d2407bb9845ad41c6339b, type: 3}
+  m_Name: SectionT22
+  m_EditorClassIdentifier: 
+  id: 0
+  min: {x: 0.34, y: 0.21}
+  max: {x: 0.66, y: 0.4}
+  sectionPanel: {fileID: 0}
+  letterText: {fileID: 0}
+  doneImage: {fileID: 0}

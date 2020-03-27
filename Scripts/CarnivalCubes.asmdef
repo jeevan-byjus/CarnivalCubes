@@ -1,11 +1,7 @@
 {
-    "name": "Template-Tests",
-    "references": [
-        "Template-Scripts"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
-    ],
+    "name": "CarnivalCubes",
+    "references": [],
+    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

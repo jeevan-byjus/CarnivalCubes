@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
-using Byjus.Gamepod.Template.Util;
+using Byjus.Gamepod.CarnivalCubes.Util;
 using UnityEngine.UI;
 
 #if !CC_STANDALONE
@@ -48,12 +48,13 @@ namespace Byjus.Gamepod.Template.Verticals {
             foreach (var item in output.items) {
                 var pos = visionBoundingBox.GetScreenPoint(CameraUtil.MainDimens(), item.pt);
                 pos = PosAdjustments(pos);
+                var normal = GenUtil.GetNormalisedPosition(pos);
 
                 if (string.Equals(item.color, "blue")) {
-                    var it = new ExtInput { id = 100 + numBlues++, type = TileType.BLUE_ROD, position = pos };
+                    var it = new ExtInput { id = 100 + numBlues++, type = TileType.BLUE_ROD, position = pos, normalizedPosition = normal };
                     ret.Add(it);
                 } else if (string.Equals(item.color, "red")) {
-                    var it = new ExtInput { id = 1000 + numReds++, type = TileType.RED_CUBE, position = pos };
+                    var it = new ExtInput { id = 1000 + numReds++, type = TileType.RED_CUBE, position = pos, normalizedPosition = normal };
                     ret.Add(it);
                 }
             }

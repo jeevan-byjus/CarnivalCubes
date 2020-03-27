@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Byjus.Gamepod.CarnivalCubes.Util;
 
-namespace Byjus.Gamepod.Template.Verticals {
+namespace Byjus.Gamepod.CarnivalCubes.Verticals {
     /// <summary>
     /// This is the interface used by whichever class wants to read Vision Data
     /// Difference is it should mainly work with in-game models and shouldn't use anything platform dependent
@@ -18,17 +19,23 @@ namespace Byjus.Gamepod.Template.Verticals {
         public TileType type;
         public int id;
         public Vector2 position;
+        public Vector2 normalizedPosition;
 
         public ExtInput() { }
 
-        public ExtInput(TileType type, int id, Vector2 position) {
-            this.type = type;
-            this.id = id;
-            this.position = position;
-        }
-
         public override string ToString() {
-            return id + ", " + type + ", (" + position.x + ", " + position.y + ")";
+            return id + ", " + type + ", " + GenUtil.VecToString(position) + ", " + GenUtil.VecToString(normalizedPosition);
+        }
+    }
+
+    public class SectionData {
+        public int id;
+        public Vector2 min;
+        public Vector2 max;
+        public List<ExtInput> items;
+
+        public SectionData() {
+            items = new List<ExtInput>();
         }
     }
 }

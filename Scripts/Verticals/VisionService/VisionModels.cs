@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Byjus.Gamepod.Template.Util;
+using Byjus.Gamepod.CarnivalCubes.Util;
 
-namespace Byjus.Gamepod.Template.Verticals {
+namespace Byjus.Gamepod.CarnivalCubes.Verticals {
 
     [Serializable]
     public class JOutput {

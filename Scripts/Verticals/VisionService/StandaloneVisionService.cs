@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using Byjus.Gamepod.CarnivalCubes.Util;
 
-namespace Byjus.Gamepod.Template.Verticals {
+namespace Byjus.Gamepod.CarnivalCubes.Verticals {
     /// <summary>
     /// Standalone variant of the Vision Service
     /// Generates random number of blue and red cubes in a range when queried for objects
@@ -19,18 +20,24 @@ namespace Byjus.Gamepod.Template.Verticals {
 
             var ret = new List<ExtInput>();
             for (int i = 0; i < numBlue; i++) {
+                var position = GeneratePos(ret);
+                var normal = GenUtil.GetNormalisedPosition(position);
                 ret.Add(new ExtInput {
                     type = TileType.BLUE_ROD,
                     id = i,
-                    position = GeneratePos(ret)
+                    position = position,
+                    normalizedPosition = normal
                 });
             }
 
             for (int i = 0; i < numRed; i++) {
+                var position = GeneratePos(ret);
+                var normal = GenUtil.GetNormalisedPosition(position);
                 ret.Add(new ExtInput {
                     type = TileType.RED_CUBE,
                     id = i + 1000,
-                    position = GeneratePos(ret)
+                    position = position,
+                    normalizedPosition = normal
                 });
             }
 
@@ -42,7 +49,6 @@ namespace Byjus.Gamepod.Template.Verticals {
             while (ExistsPosition(pos, objs)) {
                 pos = GetRandomPos();
             }
-
             return pos;
         }
 

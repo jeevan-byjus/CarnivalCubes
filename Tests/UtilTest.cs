@@ -4,14 +4,14 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.TestTools;
-using Byjus.Gamepod.Template.Verticals;
-using Byjus.Gamepod.Template.Controllers;
-using Byjus.Gamepod.Template.Views;
-using Byjus.Gamepod.Template.Util;
+using Byjus.Gamepod.CarnivalCubes.Verticals;
+using Byjus.Gamepod.CarnivalCubes.Controllers;
+using Byjus.Gamepod.CarnivalCubes.Views;
+using Byjus.Gamepod.CarnivalCubes.Util;
 using System.IO;
 
 
-namespace Byjus.Gamepod.Template.Tests {
+namespace Byjus.Gamepod.CarnivalCubes.Tests {
     public class UtilTest : BaseTestSuite {
 
         [SetUp]

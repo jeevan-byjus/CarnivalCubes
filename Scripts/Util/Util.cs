@@ -1,9 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Byjus.Gamepod.Template.Util {
+namespace Byjus.Gamepod.CarnivalCubes.Util {
     public class Constants {
-        public const float INPUT_DELAY = 0.8f;
+        public const float INPUT_DELAY = 0.5f;
         public static float SW_EQUAL_POSITION_DIFF_PERCENT = 0.5f / 100;
         public static float SW_SAME_POINT_MOVED_DIFF_PERCENT = 30.0f / 100;
 
@@ -36,6 +36,13 @@ namespace Byjus.Gamepod.Template.Util {
             var yDiff = Rounded(Mathf.Abs(point1.y - point2.y));
 
             return xDiff <= widthEpsilon && yDiff <= heightEpsilon;
+        }
+
+        public static Vector2 GetNormalisedPosition(Vector2 pos) {
+            var dimen = CameraUtil.MainDimens();
+            var topLeft = new Vector2(-dimen.x / 2, dimen.y / 2);
+            var relPos = pos - topLeft;
+            return new Vector2(relPos.x / dimen.x, relPos.y / dimen.y);
         }
 
         public static string VecToString(Vector2 pos) {
