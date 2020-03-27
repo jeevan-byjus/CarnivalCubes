@@ -9,7 +9,7 @@ using Osmo.SDK;
 using Osmo.Container.Common;
 using Osmo.SDK.Internal;
 
-namespace Byjus.Gamepod.Template.Externals {
+namespace Byjus.Gamepod.CarnivalCubes.Externals {
 
     /// <summary>
     /// The top most parent in game hierarchy in case the setup is for Osmo

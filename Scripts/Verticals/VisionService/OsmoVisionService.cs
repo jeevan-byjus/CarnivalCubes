@@ -8,7 +8,7 @@ using UnityEngine.UI;
 using Osmo.SDK.VisionPlatformModule;
 using Osmo.SDK.Vision;
 
-namespace Byjus.Gamepod.Template.Verticals {
+namespace Byjus.Gamepod.CarnivalCubes.Verticals {
 
     /// <summary>
     /// Implementation of VisionService on iPad Osmo Build

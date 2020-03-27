@@ -8,5 +8,8 @@ namespace Byjus.Gamepod.CarnivalCubes.Views {
         public GameObject sectionPanel;
         public Text letterText;
         public Image doneImage;
+
+        public int number;
+        public bool occupied;
     }
 }

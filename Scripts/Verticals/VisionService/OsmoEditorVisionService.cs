@@ -4,7 +4,7 @@ using UnityEngine;
 using Byjus.Gamepod.CarnivalCubes.Externals;
 
 #if !CC_STANDALONE
-namespace Byjus.Gamepod.Template.Verticals {
+namespace Byjus.Gamepod.CarnivalCubes.Verticals {
 
     /// <summary>
     /// Editor implementation of Vision Service
