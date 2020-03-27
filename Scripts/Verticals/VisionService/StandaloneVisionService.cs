@@ -15,8 +15,8 @@ namespace Byjus.Gamepod.CarnivalCubes.Verticals {
         }
 
         public List<ExtInput> GetVisionObjects() {
-            var numRed = Random.Range(0, 5);
-            var numBlue = Random.Range(0, 5);
+            var numRed = Random.Range(0, 15);
+            var numBlue = Random.Range(0, 0);
 
             var ret = new List<ExtInput>();
             for (int i = 0; i < numBlue; i++) {
@@ -53,8 +53,8 @@ namespace Byjus.Gamepod.CarnivalCubes.Verticals {
         }
 
         Vector2 GetRandomPos() {
-            var x = Random.Range(-3.4f, 3.4f);
-            var y = Random.Range(-4.7f, 4.7f);
+            var x = Random.Range(-3.5f, 3.5f);
+            var y = Random.Range(0.5f, 5f);
             return new Vector2(x, y);
         }
 

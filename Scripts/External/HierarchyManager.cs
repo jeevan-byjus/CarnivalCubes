@@ -24,12 +24,12 @@ namespace Byjus.Gamepod.CarnivalCubes.Externals {
             gameCtrl.view = gameManager;
 
             var visionSections = new List<SectionData>();
-            visionSections.Add(new SectionData { id = 1, min = new Vector2(0, 0), max = new Vector2(0.33f, 0.2f) });
-            visionSections.Add(new SectionData { id = 2, min = new Vector2(0.34f, 0), max = new Vector2(0.66f, 0.2f) });
-            visionSections.Add(new SectionData { id = 2, min = new Vector2(0.67f, 0), max = new Vector2(1f, 0.2f) });
-            visionSections.Add(new SectionData { id = 2, min = new Vector2(0, 0.21f), max = new Vector2(0.33f, 0.4f) });
-            visionSections.Add(new SectionData { id = 2, min = new Vector2(0.34f, 0.21f), max = new Vector2(0.66f, 0.4f) });
-            visionSections.Add(new SectionData { id = 2, min = new Vector2(0.67f, 0.21f), max = new Vector2(1f, 0.4f) });
+            visionSections.Add(new SectionData { id = 1, min = new Vector2(0, 0), max = new Vector2(0.33f, 0.25f) });
+            visionSections.Add(new SectionData { id = 2, min = new Vector2(0.34f, 0), max = new Vector2(0.66f, 0.25f) });
+            visionSections.Add(new SectionData { id = 3, min = new Vector2(0.67f, 0), max = new Vector2(1f, 0.25f) });
+            visionSections.Add(new SectionData { id = 4, min = new Vector2(0, 0.26f), max = new Vector2(0.33f, 0.5f) });
+            visionSections.Add(new SectionData { id = 5, min = new Vector2(0.34f, 0.26f), max = new Vector2(0.66f, 0.5f) });
+            visionSections.Add(new SectionData { id = 6, min = new Vector2(0.67f, 0.26f), max = new Vector2(1f, 0.5f) });
 
             ((IGameManagerCtrl) gameCtrl).Init();
             inputParser.Init(visionSections);

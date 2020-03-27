@@ -43,6 +43,7 @@ namespace Byjus.Gamepod.CarnivalCubes.Verticals {
                         obj.normalizedPosition.y >= sec.min.y &&
                         obj.normalizedPosition.y <= sec.max.y) {
 
+                        Debug.LogError("Adding obj: " + obj + ", in section: " + sec);
                         sec.items.Add(obj);
                         break;
                     }

@@ -37,5 +37,9 @@ namespace Byjus.Gamepod.CarnivalCubes.Verticals {
         public SectionData() {
             items = new List<ExtInput>();
         }
+
+        public override string ToString() {
+            return id + ", Min: " + min + ", Max: " + max + ", count: " + items.Count;
+        }
     }
 }

@@ -10,6 +10,8 @@ namespace Byjus.Gamepod.CarnivalCubes.Controllers {
         Dictionary<int, SectionInfo> mapSecIdToView;
         int totalReqd;
 
+        bool gameWaiting;
+
         public void Init() {
             mapSecIdToView = new Dictionary<int, SectionInfo>();
             var viewSections = view.GetSections();
@@ -18,7 +20,39 @@ namespace Byjus.Gamepod.CarnivalCubes.Controllers {
             }
 
             GenerateNumbers();
-            view.Setup(mapSecIdToView.Values.ToList(), totalReqd, () => { });
+
+            gameWaiting = true;
+            view.ShowIntro(() => {
+                view.Setup(mapSecIdToView.Values.ToList(), totalReqd, () => { });
+                gameWaiting = false;
+                view.StartTimer(20, 1);
+            });
+        }
+
+        public void OnTimerExpired() {
+            gameWaiting = true;
+            view.ShowGameText("DONE...", () => {
+                view.Wait(1, () => {
+                    view.ShowGameText("EVALUATING......", () => {
+                        view.Wait(3, () => {
+                            Validate();
+                        });
+                    });
+                });
+            });
+        }
+
+        void Validate() {
+            int finalCount = 0;
+            foreach (var sec in mapSecIdToView.Values) {
+                finalCount += sec.number;
+            }
+
+            if (finalCount == totalReqd) {
+                view.ShowGameText("CONGRATS... YOU SCORED " + finalCount + ". YOU WIN..!!!", () => { });
+            } else {
+                view.ShowGameText("SORRY.. YOU SCORED " + finalCount + ". NEXT TIME MAYBE..!!!", () => { });
+            }
         }
 
         void GenerateNumbers() {
@@ -32,16 +66,26 @@ namespace Byjus.Gamepod.CarnivalCubes.Controllers {
         }
 
         public void OnInput(List<SectionData> sections) {
+            if (gameWaiting) {
+                return;
+            }
+
+            view.ClearAll(() => { });
+
             foreach (var sec in sections) {
                 var viewSec = mapSecIdToView[sec.id];
-                view.MarkOccupied(viewSec, sec.items.Count > 0, () => {
+                foreach (var item in sec.items) {
+                    Debug.Log("Creating item: " + item);
+                    view.CreateRed(item.position, () => { });
+                }
 
-                });
+                view.MarkOccupied(viewSec, sec.items.Count > 0, () => { });
             }
         }
     }
 
     public interface IGameManagerCtrl {
         void Init();
+        void OnTimerExpired();
     }
 }
